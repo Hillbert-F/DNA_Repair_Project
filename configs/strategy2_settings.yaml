@@ -1,0 +1,41 @@
+# Strategy2 ridge-refinement config template.
+# This runs: Strategy2 dna_half.seq -> testing phi -> ridge-refined gamma -> Energy_mg.txt
+# Unlike Strategy1, this config does not need a training set.
+
+# Optional; if omitted, IDEA creates one from this file name + timestamp.
+# run_id: strategy2_8K8D_example
+
+defaults:
+  protein_chain: A
+  contact_cutoff_nm: 1.2
+  phi:
+    name: phi_pairwise_contact_well
+    params: [-8.0, 8.0, 0.7, 10]
+  max_testing_decoys: 1000000
+
+# Template structure used to generate phi for Strategy2 sequences.
+# The generated testing set name is test_8K8D, referenced below.
+testing:
+  - id: ThermusDarTAF
+    dna_mode: ss
+
+strategy2:
+  defaults:
+    # alpha can be a fixed non-negative number or auto.
+    alpha: 1.0
+    # Used only when alpha: auto.
+    alpha_grid:
+      min_exp: -4.0
+      max_exp: 2.0
+      num: 50
+    # identity -> y = exp; negate -> y = -exp.
+    target_sign: negate
+    fit_intercept: true # Whether to fit an intercept term in the ridge regression. If false, the intercept is set to 0.
+
+  runs:
+    ridge_ThermusDarTAF:
+      template_testing: test_ThermusDarTAF
+      # Put one motif per line. This file is copied into the staged testing workflow.
+      sequences: data/strategy2/ThermusDarTAF/dna_half.seq
+      # Put one numeric experimental value per line, in the same order as dna_half.seq.
+      exp: data/strategy2/ThermusDarTAF/exp.txt

@@ -1,0 +1,15 @@
+{
+  "energy": "/home/hfan7/IDEA/IDEA_Model/runs_strategy2/cache/energy/ridge_ThermusDarTAF__4495732bd3a56f57/Energy_mg.txt",
+  "fit_phi_hash": "4e70d4c92a47704a",
+  "gamma": "/home/hfan7/IDEA/IDEA_Model/runs_strategy2/cache/ridge/ridge_ThermusDarTAF__b145ebb49b58a87c/gamma_refined.txt",
+  "hash": "4495732bd3a56f57",
+  "kind": "strategy2_energy",
+  "label": "ridge_ThermusDarTAF",
+  "n_features": 300,
+  "n_sequences": 14,
+  "phi": "/home/hfan7/IDEA/IDEA_Model/runs_strategy2/cache/testing/fit_ridge_ThermusDarTAF__4e70d4c92a47704a/phi_decoys.txt",
+  "ridge_hash": "b145ebb49b58a87c",
+  "strategy2_version": "idea-strategy2-v1",
+  "template_testing": "test_ThermusDarTAF",
+  "version": "idea-energy-v1"
+}

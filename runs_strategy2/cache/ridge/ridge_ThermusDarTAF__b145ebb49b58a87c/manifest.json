@@ -1,0 +1,33 @@
+{
+  "alpha": 100.0,
+  "alpha_grid": {
+    "max_exp": 2.0,
+    "min_exp": -4.0,
+    "num": 50
+  },
+  "alpha_used": 100.0,
+  "exp": {
+    "n_values": 14,
+    "path": "/home/hfan7/IDEA/IDEA_Model/data/strategy2/ThermusDarTAF/exp.txt",
+    "sha256": "3bccf3e599797c32e09783296afd543861a47368ac0379841a1d0b86ba5ce5cf"
+  },
+  "fit_intercept": true,
+  "fit_phi": "runs_strategy2/cache/testing/fit_ridge_ThermusDarTAF__4e70d4c92a47704a/phi_decoys.txt",
+  "fit_phi_hash": "4e70d4c92a47704a",
+  "gamma_refined": "runs_strategy2/cache/ridge/ridge_ThermusDarTAF__b145ebb49b58a87c/gamma_refined.txt",
+  "hash": "b145ebb49b58a87c",
+  "idea_version": "0.1.0",
+  "intercept": -9.668545280221633,
+  "kind": "strategy2_ridge",
+  "label": "ridge_ThermusDarTAF",
+  "n_features": 300,
+  "n_samples": 14,
+  "sequences": {
+    "n_sequences": 14,
+    "path": "/home/hfan7/IDEA/IDEA_Model/data/strategy2/ThermusDarTAF/dna_half.seq",
+    "sha256": "f3cde2abab5b9a32721a0b4256b9ec4ecde728542d9425ce7d3853298f8148a5"
+  },
+  "strategy2_version": "idea-strategy2-v1",
+  "target_sign": "negate",
+  "template_testing": "test_ThermusDarTAF"
+}

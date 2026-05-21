@@ -1,0 +1,5 @@
+<Residue DA het=  resseq=1 icode= >
+<Residue DT het=  resseq=2 icode= >
+<Residue DC het=  resseq=3 icode= >
+<Residue DT het=  resseq=4 icode= >
+<Residue DC het=  resseq=5 icode= >

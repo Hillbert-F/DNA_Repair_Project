@@ -1,0 +1,21 @@
+{
+  "data_dir": "/home/hfan7/IDEA/IDEA_Model/data",
+  "dna_mode": "auto",
+  "prepared": [
+    {
+      "id": "8K8D",
+      "kept": {
+        "A": 1143,
+        "B": 244,
+        "C": 243
+      },
+      "source": "/home/hfan7/IDEA/IDEA_Model/data/8K8D.pdb",
+      "testing_path": "/home/hfan7/IDEA/IDEA_Model/testing/PDBs/8K8D_modified.pdb",
+      "training_path": "/home/hfan7/IDEA/IDEA_Model/training/PDBs/8K8D_modified.pdb"
+    }
+  ],
+  "targets": [
+    "testing",
+    "training"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "gamma_filtered": "runs/cache/training/train_ThermusDarTAF__5383d22b457f2f9c/gamma_filtered.txt",
+  "hash": "5383d22b457f2f9c",
+  "idea_version": "0.1.0",
+  "kind": "training",
+  "label": "train_ThermusDarTAF",
+  "pipeline_version": "idea-pipeline-v1",
+  "resolved": {
+    "contact_cutoff_nm": 1.2,
+    "gamma_cutoff_mode": 60,
+    "name": "train_ThermusDarTAF",
+    "pdbs": [
+      {
+        "id": "ThermusDarTAF",
+        "path": "/home/hfan7/IDEA/IDEA_Model/training/PDBs/ThermusDarTAF_modified.pdb",
+        "sha256": "3da5a4b87c5072ef3b4c43d24d8dd5979c5a68891eea5ba588b68b143de2dee4"
+      }
+    ],
+    "phi": {
+      "name": "phi_pairwise_contact_well",
+      "params": [
+        -8.0,
+        8.0,
+        0.7,
+        10
+      ]
+    },
+    "protein_chain": "A",
+    "training_decoys": {
+      "dna": 1000,
+      "protein": 10000
+    }
+  },
+  "training_set": "train_ThermusDarTAF",
+  "visualize": "runs/cache/training/train_ThermusDarTAF__5383d22b457f2f9c/visualize"
+}

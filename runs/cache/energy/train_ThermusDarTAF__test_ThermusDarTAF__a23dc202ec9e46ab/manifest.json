@@ -1,0 +1,13 @@
+{
+  "energy": "/home/hfan7/IDEA/IDEA_Model/runs/cache/energy/train_ThermusDarTAF__test_ThermusDarTAF__a23dc202ec9e46ab/Energy_mg.txt",
+  "gamma": "/home/hfan7/IDEA/IDEA_Model/runs/cache/training/train_ThermusDarTAF__5383d22b457f2f9c/gamma_filtered.txt",
+  "hash": "a23dc202ec9e46ab",
+  "kind": "energy",
+  "label": "train_ThermusDarTAF__test_ThermusDarTAF",
+  "n_features": 300,
+  "n_sequences": 256,
+  "phi": "/home/hfan7/IDEA/IDEA_Model/runs/cache/testing/test_ThermusDarTAF__3949d0743f39b83f/phi_decoys.txt",
+  "testing_hash": "3949d0743f39b83f",
+  "training_hash": "5383d22b457f2f9c",
+  "version": "idea-energy-v1"
+}

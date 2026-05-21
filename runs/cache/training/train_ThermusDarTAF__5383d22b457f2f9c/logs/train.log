@@ -1,0 +1,28 @@
+$ bash train.sh
+CWD: /home/hfan7/IDEA/IDEA_Model/runs/cache/training/train_ThermusDarTAF__5383d22b457f2f9c/work/training
+
+[2026-05-19 01:01:12] [INFO] We will start training the IDEA energy model. The whole training dataset are listed below:
+ThermusDarTAF
+[2026-05-19 01:01:12] [INFO] Starting generation of native and decoy phi files for each protein...
+Processing ThermusDarTAF
+Generating 1000 DNA decoys
+Generating 10000 protein decoys
+The total number of residues for ThermusDarTAF is 214.
+/home/hfan7/miniconda3/envs/IDEA/lib/python3.8/site-packages/Bio/PDB/PDBParser.py:395: PDBConstructionWarning: Ignoring unrecognized record 'END' at line 1829
+  warnings.warn(
+Running in parallel mode to compute phi values for decoys.
+Running parallel mode (4 cores), batch size = 1375
+Computation completed.
+[2026-05-19 01:01:30] [INFO] All native and decoy phi files have been successfully generated.
+[2026-05-19 01:01:30] [INFO] Copying phi files into the for_training_gamma folder...
+Copying ThermusDarTAF's files
+[2026-05-19 01:01:30] [INFO] File copying completed.
+[2026-05-19 01:01:30] [INFO] Starting gamma file generation...
+training set: ['ThermusDarTAF']
+optimize_gamma.py:45: RuntimeWarning: divide by zero encountered in true_divide
+  cutoff_mode = np.where(np.abs(lamb - noisy_lamb) / lamb > relative_error_threshold)[0][0]
+optimize_gamma.py:45: RuntimeWarning: invalid value encountered in true_divide
+  cutoff_mode = np.where(np.abs(lamb - noisy_lamb) / lamb > relative_error_threshold)[0][0]
+We retain the first 60 eigenvalues to filter gamma file.
+The last retained lambda after filtering (index 59 in filtered_lamb): 0.01361+0.00000j
+[2026-05-19 01:01:40] [INFO] Training has been completed.

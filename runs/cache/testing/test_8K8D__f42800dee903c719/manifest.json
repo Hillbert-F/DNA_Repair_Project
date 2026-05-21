@@ -1,0 +1,35 @@
+{
+  "hash": "f42800dee903c719",
+  "idea_version": "0.1.0",
+  "kind": "testing",
+  "label": "test_8K8D",
+  "phi_decoys": "runs/cache/testing/test_8K8D__f42800dee903c719/phi_decoys.txt",
+  "phi_native": "runs/cache/testing/test_8K8D__f42800dee903c719/phi_native.txt",
+  "pipeline_version": "idea-pipeline-v1",
+  "resolved": {
+    "contact_cutoff_nm": 1.2,
+    "dna_mode": "ds",
+    "max_testing_decoys": 1000000,
+    "name": "test_8K8D",
+    "pdb": {
+      "id": "8K8D",
+      "path": "/home/hfan7/IDEA/IDEA_Model/testing/PDBs/8K8D_modified.pdb",
+      "sha256": "57d0a3e84e37859253a8050a03d1d1a637a3814f9e3d6d37470a3142a99b9f00"
+    },
+    "phi": {
+      "name": "phi_pairwise_contact_well",
+      "params": [
+        -8.0,
+        8.0,
+        0.7,
+        10
+      ]
+    },
+    "protein_chain": "A",
+    "sequences": {
+      "path": "/home/hfan7/IDEA/IDEA_Model/testing/sequences/dna_half.seq",
+      "sha256": "012b93edd5fc6a9961a4b97526051732bc077a4511b1298bb09efb1fdbd2dcf4"
+    }
+  },
+  "testing_set": "test_8K8D"
+}

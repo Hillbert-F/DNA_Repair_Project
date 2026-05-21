@@ -1,0 +1,35 @@
+{
+  "hash": "3949d0743f39b83f",
+  "idea_version": "0.1.0",
+  "kind": "testing",
+  "label": "test_ThermusDarTAF",
+  "phi_decoys": "runs/cache/testing/test_ThermusDarTAF__3949d0743f39b83f/phi_decoys.txt",
+  "phi_native": "runs/cache/testing/test_ThermusDarTAF__3949d0743f39b83f/phi_native.txt",
+  "pipeline_version": "idea-pipeline-v1",
+  "resolved": {
+    "contact_cutoff_nm": 1.2,
+    "dna_mode": "ss",
+    "max_testing_decoys": 1000000,
+    "name": "test_ThermusDarTAF",
+    "pdb": {
+      "id": "ThermusDarTAF",
+      "path": "/home/hfan7/IDEA/IDEA_Model/testing/PDBs/ThermusDarTAF_modified.pdb",
+      "sha256": "3da5a4b87c5072ef3b4c43d24d8dd5979c5a68891eea5ba588b68b143de2dee4"
+    },
+    "phi": {
+      "name": "phi_pairwise_contact_well",
+      "params": [
+        -8.0,
+        8.0,
+        0.7,
+        10
+      ]
+    },
+    "protein_chain": "A",
+    "sequences": {
+      "path": "/home/hfan7/IDEA/IDEA_Model/testing/sequences/dna_half.seq",
+      "sha256": "50cb9835f40dd963514efc8ef3ad884c1a9404f035735953b3e799738fca38d6"
+    }
+  },
+  "testing_set": "test_ThermusDarTAF"
+}

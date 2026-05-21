@@ -1,0 +1,13 @@
+{
+  "energy": "/home/hfan7/IDEA/IDEA_Model/runs/cache/energy/train_8K8D__test_8K8D__4193f7473be010e5/Energy_mg.txt",
+  "gamma": "/home/hfan7/IDEA/IDEA_Model/runs/cache/training/train_8K8D__b21faa35a80cc4bb/gamma_filtered.txt",
+  "hash": "4193f7473be010e5",
+  "kind": "energy",
+  "label": "train_8K8D__test_8K8D",
+  "n_features": 300,
+  "n_sequences": 627,
+  "phi": "/home/hfan7/IDEA/IDEA_Model/runs/cache/testing/test_8K8D__f42800dee903c719/phi_decoys.txt",
+  "testing_hash": "f42800dee903c719",
+  "training_hash": "b21faa35a80cc4bb",
+  "version": "idea-energy-v1"
+}

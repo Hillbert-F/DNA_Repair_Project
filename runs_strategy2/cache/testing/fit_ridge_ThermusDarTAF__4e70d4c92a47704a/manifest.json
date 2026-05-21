@@ -1,0 +1,35 @@
+{
+  "hash": "4e70d4c92a47704a",
+  "idea_version": "0.1.0",
+  "kind": "testing",
+  "label": "fit_ridge_ThermusDarTAF",
+  "phi_decoys": "runs_strategy2/cache/testing/fit_ridge_ThermusDarTAF__4e70d4c92a47704a/phi_decoys.txt",
+  "phi_native": "runs_strategy2/cache/testing/fit_ridge_ThermusDarTAF__4e70d4c92a47704a/phi_native.txt",
+  "pipeline_version": "idea-pipeline-v1",
+  "resolved": {
+    "contact_cutoff_nm": 1.2,
+    "dna_mode": "ss",
+    "max_testing_decoys": 1000000,
+    "name": "fit_ridge_ThermusDarTAF",
+    "pdb": {
+      "id": "ThermusDarTAF",
+      "path": "/home/hfan7/IDEA/IDEA_Model/testing/PDBs/ThermusDarTAF_modified.pdb",
+      "sha256": "3da5a4b87c5072ef3b4c43d24d8dd5979c5a68891eea5ba588b68b143de2dee4"
+    },
+    "phi": {
+      "name": "phi_pairwise_contact_well",
+      "params": [
+        -8.0,
+        8.0,
+        0.7,
+        10
+      ]
+    },
+    "protein_chain": "A",
+    "sequences": {
+      "path": "/home/hfan7/IDEA/IDEA_Model/data/strategy2/ThermusDarTAF/dna_half.seq",
+      "sha256": "f3cde2abab5b9a32721a0b4256b9ec4ecde728542d9425ce7d3853298f8148a5"
+    }
+  },
+  "testing_set": "fit_ridge_ThermusDarTAF"
+}

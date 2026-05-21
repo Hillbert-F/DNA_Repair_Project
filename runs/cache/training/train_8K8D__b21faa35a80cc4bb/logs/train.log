@@ -1,0 +1,26 @@
+$ bash train.sh
+CWD: /home/hfan7/IDEA/IDEA_Model/runs/cache/training/train_8K8D__b21faa35a80cc4bb/work/training
+
+[2026-05-19 22:48:56] [INFO] We will start training the IDEA energy model. The whole training dataset are listed below:
+8K8D
+[2026-05-19 22:48:56] [INFO] Starting generation of native and decoy phi files for each protein...
+Processing 8K8D
+Generating 1000 DNA decoys
+Generating 10000 protein decoys
+The total number of residues for 8K8D is 158.
+Running in parallel mode to compute phi values for decoys.
+Running parallel mode (4 cores), batch size = 1375
+Computation completed.
+[2026-05-19 22:49:40] [INFO] All native and decoy phi files have been successfully generated.
+[2026-05-19 22:49:40] [INFO] Copying phi files into the for_training_gamma folder...
+Copying 8K8D's files
+[2026-05-19 22:49:40] [INFO] File copying completed.
+[2026-05-19 22:49:40] [INFO] Starting gamma file generation...
+training set: ['8K8D']
+optimize_gamma.py:45: RuntimeWarning: divide by zero encountered in true_divide
+  cutoff_mode = np.where(np.abs(lamb - noisy_lamb) / lamb > relative_error_threshold)[0][0]
+optimize_gamma.py:45: RuntimeWarning: invalid value encountered in true_divide
+  cutoff_mode = np.where(np.abs(lamb - noisy_lamb) / lamb > relative_error_threshold)[0][0]
+We retain the first 60 eigenvalues to filter gamma file.
+The last retained lambda after filtering (index 59 in filtered_lamb): 0.05876
+[2026-05-19 22:49:50] [INFO] Training has been completed.

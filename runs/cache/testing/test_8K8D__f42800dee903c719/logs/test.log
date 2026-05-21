@@ -1,0 +1,7 @@
+$ bash run_test_cli.sh 8K8D
+CWD: /home/hfan7/IDEA/IDEA_Model/runs/cache/testing/test_8K8D__f42800dee903c719/work/testing
+
+[INFO] Testing sequences mapping complete.
+[INFO] Start generating phi values for the 627 testing binders...
+Running in sequential mode to generate phi values for decoys.
+[INFO] Computation completed.

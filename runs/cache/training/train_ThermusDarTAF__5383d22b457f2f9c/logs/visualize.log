@@ -1,0 +1,8 @@
+$ python visualize.py
+CWD: /home/hfan7/IDEA/IDEA_Model/runs/cache/training/train_ThermusDarTAF__5383d22b457f2f9c/work/training/optimization/for_training_gamma
+
+visualize.py:186: ComplexWarning: Casting complex values to real discards the imaginary part
+  interaction_matrix[index1][index2] = gammas[i_content]
+visualize.py:187: ComplexWarning: Casting complex values to real discards the imaginary part
+  interaction_matrix[index2][index1] = gammas[i_content]
+The visualized trained energy model is saved in the 'visualize' folder.

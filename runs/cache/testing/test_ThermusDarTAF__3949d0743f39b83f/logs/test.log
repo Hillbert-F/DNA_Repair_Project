@@ -1,0 +1,9 @@
+$ bash run_test_cli.sh ThermusDarTAF
+CWD: /home/hfan7/IDEA/IDEA_Model/runs/cache/testing/test_ThermusDarTAF__3949d0743f39b83f/work/testing
+
+[INFO] Testing sequences mapping complete.
+/home/hfan7/miniconda3/envs/IDEA/lib/python3.8/site-packages/Bio/PDB/PDBParser.py:395: PDBConstructionWarning: Ignoring unrecognized record 'END' at line 1829
+  warnings.warn(
+[INFO] Start generating phi values for the 256 testing binders...
+Running in sequential mode to generate phi values for decoys.
+[INFO] Computation completed.

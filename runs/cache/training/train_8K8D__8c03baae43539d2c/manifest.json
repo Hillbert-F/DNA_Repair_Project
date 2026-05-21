@@ -1,0 +1,36 @@
+{
+  "gamma_filtered": "runs/cache/training/train_8K8D__8c03baae43539d2c/gamma_filtered.txt",
+  "hash": "8c03baae43539d2c",
+  "idea_version": "0.1.0",
+  "kind": "training",
+  "label": "train_8K8D",
+  "pipeline_version": "idea-pipeline-v1",
+  "resolved": {
+    "contact_cutoff_nm": 1.2,
+    "gamma_cutoff_mode": 60,
+    "name": "train_8K8D",
+    "pdbs": [
+      {
+        "id": "8K8D",
+        "path": "/home/hfan7/IDEA/IDEA_Model/training/PDBs/8K8D_modified.pdb",
+        "sha256": "50b5a37487599fcf9ed6aeb270ce50c0add24882cdfc252b13d2412ac37a71e0"
+      }
+    ],
+    "phi": {
+      "name": "phi_pairwise_contact_well",
+      "params": [
+        -8.0,
+        8.0,
+        0.7,
+        10
+      ]
+    },
+    "protein_chain": "A",
+    "training_decoys": {
+      "dna": 1000,
+      "protein": 10000
+    }
+  },
+  "training_set": "train_8K8D",
+  "visualize": "runs/cache/training/train_8K8D__8c03baae43539d2c/visualize"
+}

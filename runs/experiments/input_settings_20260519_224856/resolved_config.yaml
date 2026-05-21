@@ -1,0 +1,38 @@
+defaults:
+  protein_chain: A
+  contact_cutoff_nm: 1.2
+  gamma_cutoff_mode: 60
+  phi:
+    name: phi_pairwise_contact_well
+    params:
+    - -8.0
+    - 8.0
+    - 0.7
+    - 10
+  training_decoys:
+    dna: 1000
+    protein: 10000
+  max_testing_decoys: 1000000
+training:
+  pdbs:
+  - 8K8D
+testing:
+- id: 8K8D
+  dna_mode: ds
+run_id: input_settings_20260519_224856
+training_sets:
+  train_8K8D:
+    pdbs:
+    - id: 8K8D
+      path: training/PDBs/8K8D_modified.pdb
+testing_sets:
+  test_8K8D:
+    dna_mode: ds
+    pdb:
+      id: 8K8D
+      path: testing/PDBs/8K8D_modified.pdb
+    sequences: testing/sequences/dna_half.seq
+jobs:
+- name: train_8K8D__test_8K8D
+  training: train_8K8D
+  testing: test_8K8D
