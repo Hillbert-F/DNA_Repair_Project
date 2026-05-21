@@ -11,6 +11,12 @@ from common_function import *
 phis_directory = "./phis/"
 gammas_directory = "./gammas/randomized_decoy/"
 
+def parse_complex_token(value):
+    if isinstance(value, bytes):
+        value = value.decode()
+    return complex(str(value).replace("+-", "-"))
+
+
 def read_phi_list(phi_list_file_name, header_comment_syntax="#", num_header_lines=0, column_delimiter=' '):
     input_file = open(phi_list_file_name, 'r')
     phi_list = []
@@ -132,7 +138,7 @@ def read_all_gammas(phi_list_file_name, training_set_file, training_decoy_method
     # Need to filter out the complex number if in the "filtered" mode;
     if noise_filtering:
         gamma = np.loadtxt(gamma_file_name, dtype=complex, converters={
-                           0: lambda s: complex(s.decode().replace('+-', '-'))})
+                           0: parse_complex_token})
     else:
         gamma = np.loadtxt(gamma_file_name)
 

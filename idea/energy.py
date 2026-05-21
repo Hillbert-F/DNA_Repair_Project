@@ -19,13 +19,19 @@ def _np():
     return np
 
 
+def parse_complex_token(value):
+    if isinstance(value, bytes):
+        value = value.decode()
+    return complex(str(value).replace("+-", "-"))
+
+
 def load_gamma(path: str | Path):
     np = _np()
     path = Path(path)
     return np.loadtxt(
         path,
         dtype=complex,
-        converters={0: lambda s: complex(s.decode().replace("+-", "-"))},
+        converters={0: parse_complex_token},
     )
 
 
@@ -45,6 +51,14 @@ def calculate_energy(gamma, phi):
         gamma = gamma.reshape(-1)
     if phi.ndim == 1:
         phi = phi.reshape(1, -1)
+    if not np.all(np.isfinite(gamma)):
+        raise EnergyError(
+            "Gamma contains NaN or infinite values. This usually means gamma training "
+            "retained zero/near-zero eigenvalues; try lowering gamma_cutoff_mode or "
+            "training with more structures/decoys."
+        )
+    if not np.all(np.isfinite(phi)):
+        raise EnergyError("Phi contains NaN or infinite values.")
     if phi.shape[1] != gamma.shape[0]:
         raise EnergyError(
             f"Feature dimension mismatch: gamma has {gamma.shape[0]} values, "

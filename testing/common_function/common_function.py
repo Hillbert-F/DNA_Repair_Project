@@ -33,6 +33,12 @@ for three_letter, one_letter in protein_letters_3to1.items():
 
 phis_directory = "./phis/"
 
+def parse_complex_token(value):
+    if isinstance(value, bytes):
+        value = value.decode()
+    return complex(str(value).replace("+-", "-"))
+
+
 res_type_map = {
     'A': 0,
     'C': 4,
@@ -466,7 +472,7 @@ def read_all_gammas(phi_list_file_name, training_set_file, training_decoy_method
     # Need to filter out the complex number if in the "filtered" mode;
     if noise_filtering:
         gamma = np.loadtxt(gamma_file_name, dtype=complex, converters={
-                           0: lambda s: complex(s.decode().replace('+-', '-'))})
+                           0: parse_complex_token})
     else:
         gamma = np.loadtxt(gamma_file_name)
 

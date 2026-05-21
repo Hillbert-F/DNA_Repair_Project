@@ -92,7 +92,7 @@ class IdeaPipeline:
         artifact_dir = self._cache_dir("training", key, training_name)
         gamma_path = artifact_dir / "gamma_filtered.txt"
         manifest_path = artifact_dir / "manifest.json"
-        if manifest_path.exists() and gamma_path.exists() and (artifact_dir / "visualize").exists() and not force:
+        if manifest_path.exists() and gamma_path.exists() and not force:
             self._info(f"Training cache hit: {training_name} -> {artifact_dir.relative_to(self.repo_root)}")
             return Artifact("training", key, artifact_dir, manifest_path, reused=True)
 
@@ -114,9 +114,6 @@ class IdeaPipeline:
         self._info(f"Running IDEA training for {training_name}")
         self._run_command(["bash", "train.sh"], cwd=stage, log_path=logs_dir / "train.log")
         gamma_stage = stage / "optimization" / "for_training_gamma"
-        self._info(f"Generating training visualizations for {training_name}")
-        self._run_command(["python", "visualize.py"], cwd=gamma_stage, log_path=logs_dir / "visualize.log")
-
         params = phi_params_string(self.config, spec)
         source_prefix = (
             stage
@@ -127,7 +124,22 @@ class IdeaPipeline:
             / f"native_trainSetFiles_phi_pairwise_contact_well{params}_gamma_filtered"
         )
         if not source_prefix.exists():
-            raise PipelineError(f"Expected gamma file was not generated: {source_prefix}")
+            raise PipelineError(
+                "Expected gamma file was not generated after training. "
+                "Check logs/train.log for the real failure. On Colab this often means "
+                "optimize_gamma.py was killed because the session ran out of RAM; try fewer "
+                "training decoys or a high-RAM/runtime-local environment. "
+                f"Missing file: {source_prefix}"
+            )
+        visualize_status = "created"
+        self._info(f"Generating training visualizations for {training_name}")
+        try:
+            self._run_command(["python", "visualize.py"], cwd=gamma_stage, log_path=logs_dir / "visualize.log")
+        except PipelineError as exc:
+            visualize_status = "failed"
+            self._info(
+                f"Training visualization failed for {training_name}; continuing with generated gamma. {exc}"
+            )
         shutil.copy2(source_prefix, gamma_path)
         _copy_optional_dir(stage / "optimization" / "for_training_gamma" / "phis", artifact_dir / "phis")
         _copy_optional_dir(stage / "optimization" / "for_training_gamma" / "tms", artifact_dir / "tms")
@@ -143,6 +155,7 @@ class IdeaPipeline:
             "resolved": resolved,
             "gamma_filtered": str(gamma_path.relative_to(self.repo_root)),
             "visualize": str((artifact_dir / "visualize").relative_to(self.repo_root)),
+            "visualize_status": visualize_status,
         }
         _write_json(manifest_path, manifest)
         return Artifact("training", key, artifact_dir, manifest_path, reused=False)
